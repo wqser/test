@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="knockout.js"></script>
+</head>
+<body>
+<!--<p>姓：<input data-bind="value:firstName"/></p>
+<p>姓：<input data-bind="value:lastName"/></p>
+<h2>hello,<span data-bind="text:fullName"></span></h2>
+<script>
+   var viewModel={
+       firstName:ko.observable('汪'),
+       lastName:ko.observable('庆松')
+   };
+   viewModel.fullName=ko.dependentObservable(function(){
+       return viewModel.firstName()+""+viewModel.lastName();
+   });
+   ko.applyBindings(viewModel);
+</script>-->
+-----------------------------下拉菜单----------------------------------
+<script>
+    var canChooseMeal =[
+        { mealName: 'Standard', description: 'Dry crusts of bread', extraCost: 0 },
+        { mealName: 'Premium', description: 'Fresh bread with cheese', extraCost: 9.95 },
+        { mealName: 'Deluxe', description: 'Caviar and vintage Dr Pepper', extraCost: 18.50 }
+    ];
+</script>
+<h3>套餐列表</h3>
+<p>你可以通过下拉列表来选择套餐</p>
+套餐选择：<select data-bind="options:viewModel.a,optionsText:'mealName',value:chosenMeal"></select>
+<p>
+    你的选择：
+    <b data-bind="text:chosenMeal().description"></b>
+    (价格：<span data-bind="text:p(chosenMeal().extraCost)"></span>)
+</p>
+
+<script>
+    var viewModel={
+        a:[
+            { mealName: 'Standard', description: 'Dry crusts of bread', extraCost: 0 },
+            { mealName: 'Premium', description: 'Fresh bread with cheese', extraCost: 9.95 },
+            { mealName: 'Deluxe', description: 'Caviar and vintage Dr Pepper', extraCost: 18.50 }
+        ]
+    };
+    viewModel.chosenMeal=ko.observable(viewModel.a[0]);
+    function p(price) {
+        return price==0 ? 'free':'$'+price.toFixed(2)
+    }
+    ko.applyBindings(viewModel,document.getElementsByTagName('body')[0]);
+</script>
+-----------------------按钮--------------------------
+<!--<div>你已经点了 <span data-bind="text: numberOfClicks">&nbsp;</span> 次</div>
+
+<button data-bind="click: registerClick, enable: !hasClickedTooManyTimes()">点我</button>
+
+<div data-bind="visible: hasClickedTooManyTimes">
+   点击次数过多，休息一下！
+    <button data-bind="click: function() { numberOfClicks(0) }">重置</button>
+</div>
+<script>
+    var clickCounterViewModel = function () {
+        this.numberOfClicks = ko.observable(0);
+
+        this.registerClick = function () {
+            this.numberOfClicks(this.numberOfClicks() + 1);
+        }
+
+        this.hasClickedTooManyTimes = ko.dependentObservable(function () {
+            return this.numberOfClicks() >= 3;
+        }, this);
+    };
+
+    ko.applyBindings(new clickCounterViewModel());
+</script>-->
+-------------------表单-----------------------
+
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>外边距布局</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html,
+        body{
+            height:100%;
+            width: 100%;
+
+
+        }
+        #head{
+            height: 150px;
+            background-color: #5affa0;
+        }
+        #foot{
+            height: 150px;
+            background: #131dff;
+
+        }
+        #main{
+            height:calc(100% - 300px) ;
+            background-color: rgba(241, 46, 30, 0.85);
+        }
+
+        #c_l{
+            float:left;
+            height: 100%;
+            width: 150px;
+            background-color: rgba(54, 241, 89, 0.85);
+        }
+        #c_r{
+            float:right;
+            height: 100%;
+            width: 150px;
+            background-color: rgba(218, 50, 241, 0.85);
+        }
+        #c_c {
+            margin-left: 150px;
+            margin-right: 150px;
+            height: 100%;
+            background-color: #77daff;
+        }
+    </style>
+</head>
+<body>
+<div id="head"></div>
+
+<div id="main">
+    <div id="c_l"></div>
+    <div id="c_r"></div>
+    <div id="c_c"></div>
+    <div id="clear"></div>
+</div>
+<div id="foot"></div>
+</body>
+</html>

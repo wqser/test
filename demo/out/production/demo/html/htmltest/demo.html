@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<script>
+    function destroyer(arr) {
+    var val1=arguments[1];
+    var val2 = arguments[2];
+    // 请把你的代码写在这里
+    arr = arr.filter(function(val){
+        if(val!=val1&&val!=val2){
+            return val;
+        }
+    });
+    return arr;
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+    function where(arr, num) {
+        arr.push(num);
+        var len = arr.length;
+        for (var i = 0; i < len; i++) {
+            for (var j = 0; j < len - 1 - i; j++) {
+                if (arr[j] > arr[j+1]) {        //相邻元素两两对比
+                    var temp = arr[j+1];        //元素交换
+                    arr[j+1] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        console.log(arr+"   "+"数组");
+        num=arr.indexOf(num);
+        return num;
+    }
+
+   console.log(where([2, 20, 10], 19));
+    var a = "A";
+    console.log(a.charCodeAt());
+
+    function rot13(str) {
+        var newarr = [];
+        for (var i = 0; i < str.length; i++) {
+            if (str.charCodeAt(i) < 65 || str.charCodeAt(i) > 90) {
+                newarr.push(str.charAt(i));
+            } else if (str.charCodeAt(i) > 77) {
+                newarr.push(String.fromCharCode(str.charCodeAt(i) - 13));
+            } else {
+                newarr.push(String.fromCharCode(str.charCodeAt(i) + 13));
+            }
+        }
+        return newarr.join("");
+    }
+    console.log(rot13("SERR PBQR PNZC"));
+
+    var str = "adfadfas";
+     str[0] = "2";
+    console.log(str);
+</script>
+
+</body>
+</html>

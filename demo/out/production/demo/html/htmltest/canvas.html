@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图形</title>
+
+    <script src="jquery-3.1.0.js"></script>
+
+</head>
+<body>
+<canvas id="mycanvas" width="400px" height="400px">
+
+</canvas>
+<script>
+    $(document).ready(function () {
+        var canvas = $("#mycanvas");
+        var context = canvas.get(0).getContext("2d");
+
+        context.beginPath(); // Start the path
+        context.arc(230, 90, 50, 0, Math.PI*2, false); // Draw a circle
+        context.closePath(); // Close the path
+        context.fill(); // Fill the path
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>外边距布局</title>
+    <style type="text/css">
+        body{
+            margin:0;
+            padding:0;
+            min-width:600px;
+        }
+        .main{
+            float:left;
+            width:100%;
+        }
+        .main_body{
+            margin:0 210px;
+            background:#888;
+            height:200px;
+        }
+        .left,.right{
+            float:left;
+            width:200px;
+            height:200px;
+            background:#F60;
+        }
+        .left{
+            margin-left:-100%;
+        }
+        .right{
+            margin-left:-200px;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="main_body">ajkdhfsasdfjasdfhhas</div>
+</div>
+<div class="left">Left</div>
+<div class="right">Right</div>
+<script>
+    function unique(array){
+        var n = [array[0]];
+        for(var i = 1; i < array.length; i++) {
+            if (array.indexOf(array[i]) == i) n.push(array[i]);
+        }
+        return n;
+    }
+    var a=[1,2,3,4,4];
+    console.log(unique(a));
+</script>
+</body>
+</html>

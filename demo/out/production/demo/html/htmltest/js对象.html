@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js对象</title>
+</head>
+<body>
+<script>
+    var m=Math.round(2.3);//原生对象
+    //alert(m);
+  var today_=new Date();
+    var a=today_.getDay()
+    //alert(a);
+   document.write(Date())
+</script>
+<h2 id="ass">你好啊</h2>
+<script>
+    document.getElementById("ass").innerHTML="welcome";
+</script>
+<script>
+    function person(name,bor,sex,age){
+        this.name=name;
+        this.bor=bor;
+        this.sex=sex;
+        this.age=age;
+        this.reName=reName;
+        function reName(rename){
+         this.name=rename;
+        }
+    }
+    a=new person("wqs","1992","男","24");
+    a.reName("asdf");
+    var func = a.reName;
+    func();
+   document.write(a.name)
+</script>
+<p id="ob"></p>
+<button onclick="s_1()"></button>
+<script>
+    function s_1(){
+       var x;
+        var tx=" ";
+        var person={naem:"wqs",age:"24"};
+        for(x in person){
+            tx=tx+person[x];
+        }
+        document.getElementById("ob").innerHTML=tx;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相对定位布局(终)</title>
+    <style  type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        html,body{
+            height: 100%;
+            width:100% ;
+
+        }
+        .center{
+            background-color: #dbfff1;
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+        .a{
+            background-color: #ff3c45;
+            height: 200px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            right: 0px;
+        }
+        .b{
+            background-color: #2f27ff;
+            width: 300px;
+            position: absolute;
+            left: 0;
+            top:200px;
+            bottom: 200px;
+        }
+        .c{
+            background-color: #a2ff45;
+            position: absolute;
+            left: 300px;
+            top:200px;
+            right:300px;
+            bottom: 200px;
+        }
+        .d{
+            background-color: #ff15bf;
+            width: 300px;
+            position: absolute;
+            top:200px;
+            right: 0;
+            bottom: 200px;
+        }
+        .e{
+            background-color: #0a160a;
+            height: 200px;
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="center">
+
+    <div class="a"></div>
+    <div class="b"></div>
+    <div class="c">你好啊</div>
+    <div class="d"></div>
+    <div class="e"></div>
+</div>
+
+</body>
+</html>

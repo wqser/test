@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>布局实验</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+       html,
+       body{
+           height:100%;
+           width: 100%;
+           background-color: #0a160a;
+       }
+        #Container{
+            position: relative;
+            height:100%;
+            width: 100%;
+            margin: 0 auto;
+            background: #94ffdd;
+        }
+        #head{
+            height: 150px;
+            background: #5affa0;
+        }
+        #center{
+            height: calc(100% - 300px);
+            background: #846bff;
+        }
+        #c_l{
+            height: 100%;
+            width:100px;
+            background: #06ff1a;
+            float: left;
+
+        }
+        #c_c{
+            height: 100%;
+            width: calc(100% - 200px);
+            background: #ffc31c;
+            float: left;
+        }
+        #c_r{
+            width: 100px;
+            height: 100%;
+            background: #76ffb9;
+            float: right;
+
+        }
+
+        .clear{
+            clear:both;
+        }
+        #foot{
+            height: 150px;
+            background: #131dff;
+
+        }
+    </style>
+</head>
+<body style="margin: 0">
+<div id="Container">
+
+    <div id="head">
+        <div id="logo"></div>
+    </div>
+    <div id="center">
+        <div id="c_l"></div>
+        <div id="c_c"></div>
+        <div id="c_r"></div>
+        <div  class="clear"></div>
+    </div>
+    <div id="foot"></div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件</title>
+</head>
+<body>
+<h3  onclick="chenge(this)">请点击</h3>
+<script>
+    function chenge(id){
+        id.innerHTML="谢谢";
+    }
+</script>
+<!--添加节点-->
+<div id="ab">
+    <p id="a">第一段</p>
+    <p id="b">第二段</p>
+</div>
+<script>
+    var a=document.createElement("p");
+    var node=document.createTextNode("第三段");
+    a.appendChild(node);
+      var e=document.getElementById("ab");
+    e.appendChild(a);
+</script>
+<!--删除节点-->
+<div id="del">
+    <p id="d_1">第一段</p>
+    <p id="d_2">第二段</p>
+</div>
+<script>
+    var child=document.getElementById("d_1");
+     child.parentNode.removeChild(child)
+     var adfdaf="da";
+    var dadfa= "拟好";
+    console.log(adfdaf.length+"----------------------------"+dadfa.length)
+    function getZFWlength(string){
+        var Zcount = 0;
+        var ZunicodeNum = 0;
+        var Ycount = 0;
+        for(var i=0;i<string.length;i++){
+            //对每一位字符串进行判断，如果Unicode编码在0-127，计数器+1；否则+2
+            if(string.charCodeAt(i)<128 && string.charCodeAt(i)>=0 ){
+                Ycount++; //一个英文在Unicode表中站一个字符位
+            }else{
+                Zcount++;
+                ZunicodeNum+=2; //一个中文在Unicode表中站二个字符位
+            }
+        }
+     return ZunicodeNum+Ycount;
+    }
+    var testString = "ad你好 ";
+alert(getZFWlength(testString));
+</script>
+</body>
+</html>

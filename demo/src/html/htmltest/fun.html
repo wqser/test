@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>布局实验</title>
+    <style tyle="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #main{
+            height: 700px;
+            width: 1200px;
+            border: 1px solid red;
+            margin: 0 auto;
+        }
+        .top{
+            height: 200px;
+            width: 1200px;
+            border: 1px solid black;
+
+        }
+        .cht{
+            height: 50px;
+            width: 800px;
+
+             text-align: center;
+              margin: 45px auto;
+        }
+        .cht td{
+            height: 20px;
+            width: 40px;
+            border: 1px solid red;
+
+        }
+        .search{
+            height: 100px;
+            width: 800px;
+            border: 1px solid green;
+            text-align: center;
+            margin:0px auto;
+        }
+        .ftable{
+            display: inline-block;
+            border: 0px solid red;
+            line-height: 100px;
+        }
+        .ftable .searchtr{
+            width: 300px;
+            height: 40px;
+
+        }
+        .ftable .sc2{
+            width: 50px;
+            height: 45px;
+            background-color: #ff0e0d;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+<div  id="main">
+<div class="top">
+    <div class="search">
+        <table class="ftable" >
+            <tr>
+                <td >
+                    <input type="text"  class="searchtr" name="search" />
+                </td>
+                <td>
+                    <input type="button" class="sc2" value="搜索"/>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <table class="cht" >
+        <tr>
+            <td><a>衣服</a></td>
+            <td><a>裤子</a></td>
+            <td><a>球鞋</a></td>
+            <td><a>化妆品</a></td>
+            <td><a>电器</a></td>
+            <td><a>食品</a></td>
+        </tr>
+    </table>
+
+</div>
+
+<div class="center"></div>
+<div class="foot"></div>
+</div>
+
+</body>
+</html>
